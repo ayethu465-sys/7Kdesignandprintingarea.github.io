@@ -87,18 +87,49 @@
         }
 
         /* --- About Section --- */
-        .about { padding: 120px 8% 80px; }
-        .about-content { 
-            max-width: 1100px; margin: 0 auto; background: var(--glass); padding: 60px 40px; border-radius: 40px; border: 1px solid var(--border);
-            transition: 0.5s ease-in-out; cursor: default;
-        }
-        .about-content:hover { 
-            border-color: var(--accent); 
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        .about p { color: #fff; font-size: 1.05rem; text-align: justify; line-height: 2; margin-bottom: 25px; text-shadow: 1px 1px 2px #000; }
+       .about { padding: 80px 0; background: #0a0a0a; color: #fff; text-align: center; }
+    .about-intro { max-width: 900px; margin: 0 auto 50px; line-height: 1.8; opacity: 0.9; }
+    
+    .about-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap: 25px; 
+        margin-bottom: 50px;
+    }
+
+    .about-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(0, 210, 255, 0.2);
+        border-radius: 20px;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: left;
+        backdrop-filter: blur(10px);
+    }
+
+    .about-card:hover {
+        border-color: #00d2ff;
+        box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        transform: translateY(-5px);
+    }
+
+    .highlighted-card { border: 1px solid #00d2ff; background: rgba(0, 210, 255, 0.05); }
+
+    .card-icon { font-size: 2.5rem; color: #00d2ff; margin-bottom: 15px; }
+    .about-card h3 { color: #00d2ff; font-size: 1.2rem; margin-bottom: 15px; }
+    .about-card ul { list-style: none; padding: 0; }
+    .about-card li { margin-bottom: 10px; font-size: 0.95rem; }
+
+    .solution-highlight {
+        background: linear-gradient(135deg, rgba(0,210,255,0.1) 0%, rgba(0,0,0,1) 100%);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #00d2ff;
+        margin-top: 40px;
+    }
+
+    .solution-motto { font-size: 1.8rem; color: #00d2ff; margin: 20px 0; text-shadow: 0 0 10px #00d2ff; }
+    .solution-desc { max-width: 800px; margin: 0 auto; opacity: 0.8; }
 
         /* --- Services Section --- */
         .services { padding: 80px 8%; }
@@ -579,49 +610,49 @@
     </section>
 
       <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <div class="about-content">
-        <h2 class="section-title">About Us</h2>
+ <section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">ABOUT US</h2>
+        
+        <div class="about-intro">
+            <p>ကျွန်တော်တို့ <strong>7K</strong> သည် ၂၀၂၃ ခုနှစ်ကတည်းက ရန်ကုန်မြို့၊ အလုံမြို့နယ်မှာ အခြေစိုက်ပြီး လူကြီးမင်းတို့ရဲ့ လုပ်ငန်းပုံရိပ် (Brand Image) ကို ပိုမိုတောက်ပလာစေရန် အကောင်းဆုံး ပုံနှိပ်ဝန်ဆောင်မှုများ ပေးနေသည့် နေရာတစ်ခု ဖြစ်ပါသည်။</p>
+            <p>7K Design & Printing Area ကတော့ အဲ့ဒီ First Impression ကို အကောင်းဆုံးဖန်တီးပေးနေတဲ့ နေရာတစ်ခုပါ။ Customer တွေရဲ့ Idea တွေကို Modern Design၊ Premium Quality Printing နဲ့ ပေါင်းစပ်ပြီး မြင်လိုက်တာနဲ့ မှတ်မိသွားစေမယ့် Artwork တွေ ဖန်တီးပေးနေပါတယ်။</p>
+            <p>Sticker ဖြစ်ဖြစ်၊ Banner ဖြစ်ဖြစ်၊ Name Card ဖြစ်ဖြစ် အသေးဆုံး Detail ကအစ Quality ကို အလေးထားပြီး သေသပ်မှုနဲ့ Professional ဆန်မှုကို ဦးစားပေးလုပ်ဆောင်ပါတယ်။</p>
+        </div>
 
-        <p>
-            7K Design & Printing Area ကို ၂၀၂၃ ခုနှစ်၊ ဇူလိုင်လ (၇) ရက်နေ့တွင် ရန်ကုန်မြို့၊ အလုံမြို့နယ်၌ စတင်တည်ထောင်ခဲ့ပြီး လူကြီးမင်းတို့၏ Brand Image ကို ပိုမိုထင်ရှားတောက်ပလာစေရန် Quality Printing & Creative Design Services များကို Professional ဆန်စွာ ဝန်ဆောင်မှုပေးလျက်ရှိပါသည်။
-        </p>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                <h3>ကျွန်ုပ်တို့၏ Vision | (မျှော်မှန်းချက်)</h3>
+                <p>ခေတ်မီဆန်းသစ်သော ဒီဇိုင်းများနှင့် အဆင့်မြင့်ပုံနှိပ်နည်းပညာများကို ပေါင်းစပ်ပြီး မြန်မာ့ပုံနှိပ်လောကတွင် ယုံကြည်စိတ်ချရဆုံးနှင့် အရည်အသွေးအကောင်းဆုံး လုပ်ငန်းတစ်ခုအဖြစ် ရပ်တည်ရန်။</p>
+            </div>
 
-        <p>
-            ယနေ့ခေတ် Business လောကတွင် First Impression သည် အလွန်အရေးကြီးသောအရာတစ်ခုဖြစ်ပြီး Design နှင့် Printing Quality က Brand တစ်ခု၏ ယုံကြည်မှုနှင့် Professional Image ကို ဖော်ပြပေးနိုင်သော အဓိကအချက်တစ်ခုဖြစ်ပါသည်။ 7K Design & Printing Area မှာတော့ Customer များ၏ Idea နှင့် Vision များကို Modern Design Concept များ၊ Premium Quality Printing များနှင့် ပေါင်းစပ်ကာ မြင်လိုက်သည်နှင့် မှတ်မိသွားစေမည့် Artwork များအဖြစ် ဖန်တီးပေးနေပါသည်။
-        </p>
+            <div class="about-card highlighted-card">
+                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>ကျွန်ုပ်တို့၏ Mission | (ရည်မှန်းချက်)</h3>
+                <ul>
+                    <li><strong>Quality First:</strong> အသေးဆုံး Detail မှအစ အမှားအယွင်းမရှိစေဘဲ အကောင်းဆုံး Quality ရရှိစေရန်။</li>
+                    <li><strong>Customer Trust:</strong> တိကျမြန်ဆန်သော ဝန်ဆောင်မှုဖြင့် Customer တိုင်း စိတ်ကျေနပ်မှုရရှိစေရန်။</li>
+                    <li><strong>Creative Solutions:</strong> လုပ်ငန်းအောင်မြင်မှုအတွက် ထိရောက်သော Design Solution များ ပေးအပ်ရန်။</li>
+                </ul>
+            </div>
 
-        <p>
-            Sticker, Banner, Name Card, Vinyl, Label နှင့် Advertising Materials များအထိ Product တိုင်းကို အသေးစိတ် Detail များအထိ အထူးဂရုပြုကာ Quality, Clean Finish နှင့် Professional Standard ကို အမြဲဦးစားပေး ဆောင်ရွက်ပေးပါသည်။
-        </p>
+            <div class="about-card">
+                <div class="card-icon"><i class="fas fa-heart"></i></div>
+                <h3>Core Values | (တန်ဖိုးထားမှုများ)</h3>
+                <ul>
+                    <li><strong>တာဝန်ယူမှု:</strong> အလုပ်တိုင်းကို စေတနာထားပြီး အဆုံးထိ တာဝန်ယူသည်။</li>
+                    <li><strong>တိကျမှု:</strong> ပေးထားသော ရက်အတွင်း အကောင်းဆုံးလက်ရာများ ထွက်ရှိစေရန် လုပ်ဆောင်သည်။</li>
+                    <li><strong>သေသပ်မှု:</strong> Professional ဆန်သော အချောသတ်လက်ရာများဖြစ်စေရန် ကိုင်တွယ်သည်။</li>
+                </ul>
+            </div>
+        </div>
 
-        <p>
-            “Best Service, Best Quality” ဟူသော ခံယူချက်ဖြင့် Customer Satisfaction ကို အဓိကထားပြီး Friendly Service, Fast Production နှင့် Reliable Quality တို့ဖြင့် လူကြီးမင်းတို့၏ Business များ ပိုမိုတိုးတက်အောင်မြင်စေရန် အမြဲကြိုးစားဆောင်ရွက်လျက်ရှိပါသည်။
-        </p>
-
-        <p>
-            7K အတွက် Printing ဆိုသည်မှာ စာရွက်ပေါ် Ink တင်ခြင်းတစ်ခုတည်းမဟုတ်ဘဲ Brand တစ်ခု၏ Identity, Value နှင့် Professional Image ကို လူအများ၏စိတ်ထဲတွင် မှတ်မိသွားစေမည့် Art တစ်ခုဟု ယုံကြည်ထားပါသည်။
-        </p>
-
-        <p>
-            7K Design & Printing Area was established on July 7, 2023, in Ahlone Township, Yangon, with the aim of providing professional printing and creative design services that help elevate and strengthen your brand image.
-        </p>
-
-        <p>
-            In today’s business world, first impressions matter. Design and printing quality play an important role in expressing the professionalism and credibility of a brand. At 7K Design & Printing Area, we transform our customers’ ideas and visions into memorable artwork through modern design concepts and premium-quality printing solutions.
-        </p>
-
-        <p>
-            From stickers, banners, and name cards to vinyls, labels, and advertising materials, we carefully focus on every detail to ensure quality, clean finishing, and professional standards in every product we create.
-        </p>
-
-        <p>
-            Guided by our motto, “Best Service, Best Quality,” we are committed to customer satisfaction by delivering friendly service, fast production, and reliable quality to support the growth and success of your business.
-        </p>
-
-        <p>
-            For 7K, printing is not simply about putting ink on paper — it is an art that represents a brand’s identity, value, and professional image in a way that leaves a lasting impression.
-        </p>
+        <div class="solution-highlight">
+            <p>7K အတွက် Printing ဆိုတာ စာရွက်ပေါ် Ink တင်တာမဟုတ်ဘဲ Brand တစ်ခုရဲ့ Image နဲ့ Value ကို ဖော်ပြပေးတဲ့ Art တစ်ခုလို့ ယုံကြည်ထားပါတယ်။</p>
+            <h3 class="solution-motto">“လုပ်ငန်းရှင်တိုင်းအဆင်ပြေဖို့ အဖြေ 7K”</h3>
+            <p class="solution-desc">ဒီဇိုင်းအခက်အခဲမှအစ အရည်အသွေးမြင့်ပုံနှိပ်လက်ရာများကို အချိန်မီရရှိစေဖို့ ကျွန်တော်တို့က အကောင်းဆုံး Solution တွေကို တာဝန်ယူဖြေရှင်းပေးနေပါသည်။</p>
+        </div>
     </div>
 </section>
 
