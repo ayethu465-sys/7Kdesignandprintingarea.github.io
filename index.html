@@ -93,6 +93,7 @@
     background: #000;
     color: #fff;
     overflow: hidden;
+    font-family: 'Pyidaungsu', sans-serif;
 }
 
 .about-wrapper {
@@ -110,19 +111,21 @@
 }
 
 .main-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 30px;
-    letter-spacing: -2px;
 }
 
-.cyan-text { color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
+.cyan-text { 
+    color: #00d2ff; 
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4); 
+}
 
 .intro-content p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #e0e0e0;
+    color: #ffffff;
 }
 
 .motto-box {
@@ -134,47 +137,66 @@
 
 .motto-box h3 { color: #00d2ff; font-size: 1.6rem; margin-bottom: 10px; }
 
-/* Right Side Styles */
+/* Right Side Cards Styling */
 .about-right {
     flex: 1;
     min-width: 350px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .status-item {
     display: flex;
     gap: 20px;
     padding: 25px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 210, 255, 0.1);
     border-radius: 15px;
-    transition: 0.3s;
+    transition: all 0.4s ease; /* Animation ကို ချောမွေ့အောင် */
+    cursor: pointer;
 }
 
-.status-item.highlight { border: 1px solid #00d2ff; }
+/* ထောက်လိုက်တဲ့နေရာပဲ လင်းပြီး ကြွလာမယ့်အပိုင်း */
+.status-item:hover {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: #00d2ff;
+    transform: scale(1.03) translateX(10px); /* နည်းနည်းကြီးလာပြီး ရှေ့တိုးလာမယ် */
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+}
 
 .status-icon {
     font-size: 2rem;
     color: #00d2ff;
+    transition: 0.3s;
+}
+
+.status-item:hover .status-icon {
+    filter: drop-shadow(0 0 8px #00d2ff);
 }
 
 .status-text h4 {
     font-size: 1.2rem;
     color: #00d2ff;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
-.status-text p { font-size: 0.95rem; color: #ccc; line-height: 1.5; }
+.status-text p { font-size: 0.95rem; color: #ffffff; line-height: 1.6; }
 
 .final-quote {
     font-style: italic;
     color: #00d2ff;
     text-align: right;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 0.9rem;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5rem; }
+    .about-wrapper { flex-direction: column; }
+    .status-item:hover { transform: scale(1.02); } /* ဖုန်းမှာဆိုရင် ညာဘက်မတိုးဘဲ ကြွရုံပဲ */
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .main-title { font-size: 2.5rem; }
