@@ -88,9 +88,45 @@
 
         /* --- About Section --- */
 .about {
-    background: #000;
     padding: 100px 20px;
-    color: #ffffff; /* ကျန်တဲ့ section တွေလို အဖြူစစ်စစ် ပြောင်းလိုက်ပြီ */
+    background-color: #000000;
+    /* အနောက်မှာ မျဉ်းကွေးလိုလို pattern လေးတွေနဲ့ Glow effect ပါအောင် လုပ်တာ */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
+        linear-gradient(rgba(0, 210, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 210, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 210, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 210, 255, 0.1);
+}
+
+/* လှုပ်ရှားနေတဲ့ အလင်းတန်း (Wave) ပုံစံလေးဖြစ်အောင် ထပ်ထည့်တာ */
+.about::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.03) 0%, transparent 70%);
+    animation: moveGlow 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes moveGlow {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10%, 10%); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Content တွေကို Background ရဲ့ အပေါ်မှာ ပေါ်နေအောင် လုပ်တာ */
+.about-container {
+    position: relative;
+    z-index: 1;
 }
 
 .about-container {
