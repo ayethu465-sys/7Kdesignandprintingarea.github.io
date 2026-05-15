@@ -88,119 +88,97 @@
         }
 
         /* --- About Section --- */
-.about {
+.about-creative {
     padding: 100px 20px;
-    background-color: #000;
-    /* နောက်ခံမှာ မျဉ်းကွေးနဲ့ Grid pattern ပါအောင်လုပ်တဲ့အပိုင်း */
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 210, 255, 0.1) 0%, transparent 40%),
-        linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
-    position: relative;
+    background: #000;
+    color: #fff;
     overflow: hidden;
 }
 
-.about-container {
-    max-width: 1100px;
+.about-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    z-index: 2;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
 }
 
-.section-title {
-    color: #00d2ff;
-    font-size: 3rem;
-    text-shadow: 0 0 20px rgba(0, 210, 255, 0.7);
-    margin-bottom: 40px;
+.about-left {
+    flex: 1;
+    min-width: 350px;
 }
 
-.about-intro p {
-    color: #ffffff;
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+}
+
+.cyan-text { color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
+
+.intro-content p {
+    font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    color: #e0e0e0;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.motto-box {
+    margin-top: 40px;
+    padding: 30px;
+    border-left: 4px solid #00d2ff;
+    background: rgba(0, 210, 255, 0.05);
+}
+
+.motto-box h3 { color: #00d2ff; font-size: 1.6rem; margin-bottom: 10px; }
+
+/* Right Side Styles */
+.about-right {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-    margin: 60px 0;
 }
 
-.about-card {
-    background: rgba(0, 210, 255, 0.03);
-    border: 1px solid rgba(0, 210, 255, 0.3);
-    border-radius: 20px;
-    padding: 40px 30px;
-    text-align: left;
-    transition: 0.4s;
-    backdrop-filter: blur(5px);
+.status-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    transition: 0.3s;
 }
 
-.about-card.highlighted {
-    border: 2px solid #00d2ff;
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
-}
+.status-item.highlight { border: 1px solid #00d2ff; }
 
-.about-card:hover {
-    transform: translateY(-10px);
-    border-color: #00d2ff;
-    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
-}
-
-.card-icon {
-        font-size: 2.5rem; /* Icon ရဲ့ အကြီးအသေးကို ဒါနဲ့ထိန်းမယ် */
-        color: #00d2ff;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: flex-start; /* Icon ကို ဘယ်ဘက်ကပ်ထားမယ် */
-    }
-
-    .card-icon i {
-        filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.7)); /* Icon ကို Glow effect ပေးတာ */
-    }
-.about-card h3 { color: #00d2ff; margin-bottom: 15px; }
-.about-card p { color: #fff; font-size: 0.95rem; line-height: 1.6; }
-
-.solution-box {
-    border-top: 1px solid rgba(0, 210, 255, 0.2);
-    padding-top: 50px;
-}
-
-.final-motto {
-    font-size: 2.8rem;
+.status-icon {
+    font-size: 2rem;
     color: #00d2ff;
-    text-shadow: 0 0 25px #00d2ff;
-    margin: 25px 0;
-    font-weight: bold;
 }
 
-.art-quote {
-    color: #00d2ff;
-    font-style: italic;
+.status-text h4 {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-/* Motto အပိုင်းကို ပိုတောက်အောင် လုပ်တာ */
-.final-motto {
-    font-size: 2.5rem;
     color: #00d2ff;
-    text-shadow: 0 0 15px #00d2ff, 0 0 30px rgba(0, 210, 255, 0.5);
-    margin: 25px 0;
-    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 
-.highlight-text {
-    color: #ffffff;
-    border-left: 5px solid #00d2ff;
-    padding-left: 20px;
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 20px;
+.status-text p { font-size: 0.95rem; color: #ccc; line-height: 1.5; }
+
+.final-quote {
+    font-style: italic;
+    color: #00d2ff;
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5rem; }
+    .about-wrapper { flex-direction: column; }
 }
 /* Mobile အတွက် */
 @media (max-width: 768px) {
@@ -686,45 +664,50 @@
     </section>
 
       <!-- ABOUT SECTION -->
-<section id="about" class="about">
-    <div class="about-container">
-        <h2 class="section-title">ABOUT US</h2>
-        
-        <div class="about-intro">
-            <p>ကျွန်တော်တို့ <strong>7K</strong> သည် ၂၀၂၃ ခုနှစ်ကတည်းက ရန်ကုန်မြို့၊ အလုံမြို့နယ်မှာ အခြေစိုက်ပြီး လူကြီးမင်းတို့ရဲ့ လုပ်ငန်းပုံရိပ် (Brand Image) ကို ပိုမိုတောက်ပလာစေရန် အကောင်းဆုံး ပုံနှိပ်ဝန်ဆောင်မှုများ ပေးနေသည့် နေရာတစ်ခု ဖြစ်ပါသည်။</p>
-            <p>7K Design & Printing Area ကတော့ အဲ့ဒီ First Impression ကို အကောင်းဆုံးဖန်တီးပေးနေတဲ့ နေရာတစ်ခုပါ။ Customer တွေရဲ့ Idea တွေကို Modern Design၊ Premium Quality Printing နဲ့ ပေါင်းစပ်ပြီး မြင်လိုက်တာနဲ့ မှတ်မိသွားစေမယ့် Artwork တွေ ဖန်တီးပေးနေပါတယ်။</p>
-        </div>
-
-        <div class="about-grid">
-            <div class="about-card">
-                <div class="card-icon">
-                    <i class="fas fa-eye"></i>
-                </div>
-                <h3>ကျွန်ုပ်တို့၏ Vision</h3>
-                <p>ခေတ်မီဆန်းသစ်သော ဒီဇိုင်းများနှင့် အဆင့်မြင့်ပုံနှိပ်နည်းပညာများကို ပေါင်းစပ်ပြီး မြန်မာ့ပုံနှိပ်လောကတွင် ယုံကြည်စိတ်ချရဆုံးနှင့် အရည်အသွေးအကောင်းဆုံး လုပ်ငန်းတစ်ခုအဖြစ် ရပ်တည်ရန်။</p>
+<section id="about" class="about-creative">
+    <div class="about-wrapper">
+        <div class="about-left">
+            <h2 class="main-title">ABOUT <span class="cyan-text">7K</span></h2>
+            <div class="intro-content">
+                <p>ကျွန်တော်တို့ <strong>7K</strong> သည် ၂၀၂၃ ခုနှစ်ကတည်းက ရန်ကုန်မြို့၊ အလုံမြို့နယ်မှာ အခြေစိုက်ပြီး လူကြီးမင်းတို့ရဲ့ လုပ်ငန်းပုံရိပ် (Brand Image) ကို ပိုမိုတောက်ပလာစေရန် အကောင်းဆုံး ပုံနှိပ်ဝန်ဆောင်မှုများ ပေးနေသည့် နေရာတစ်ခု ဖြစ်ပါသည်။</p>
+                <p>7K Design & Printing Area ကတော့ အဲ့ဒီ First Impression ကို အကောင်းဆုံးဖန်တီးပေးနေတဲ့ နေရာတစ်ခုပါ။ Customer တွေရဲ့ Idea တွေကို Modern Design၊ Premium Quality Printing နဲ့ ပေါင်းစပ်ပြီး မြင်လိုက်တာနဲ့ မှတ်မိသွားစေမယ့် Artwork တွေ ဖန်တီးပေးနေပါတယ်။</p>
             </div>
-
-            <div class="about-card highlighted">
-                <div class="card-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-                <h3>ကျွန်ုပ်တို့၏ Mission</h3>
-                <p>Quality First: အသေးဆုံး Detail မှအစ အမှားအယွင်းမရှိစေဘဲ အကောင်းဆုံး Quality ရရှိစေရန်နှင့် Customer တိုင်း စိတ်ကျေနပ်မှုရရှိစေမည့် Solution များ ပေးအပ်ရန်။</p>
-            </div>
-
-            <div class="about-card">
-                <div class="card-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3>Core Values</h3>
-                <p>တာဝန်ယူမှု၊ တိကျမှုနှင့် သေသပ်မှုများကို အခြေခံပြီး Professional ဆန်သော အချောသတ်လက်ရာများဖြစ်စေရန် စေတနာထား၍ ကိုင်တွယ်ဆောင်ရွက်ပါသည်။</p>
+            
+            <div class="motto-box">
+                <h3>“လုပ်ငန်းရှင်တိုင်းအဆင်ပြေဖို့ အဖြေ 7K”</h3>
+                <p>ဒီဇိုင်းအခက်အခဲမှအစ အရည်အသွေးမြင့်ပုံနှိပ်လက်ရာများအထိ ကျွန်ုပ်တို့က တာဝန်ယူဖြေရှင်းပေးပါသည်။</p>
             </div>
         </div>
 
-        <div class="solution-box">
-            <p class="art-quote">7K အတွက် Printing ဆိုတာ စာရွက်ပေါ် Ink တင်တာမဟုတ်ဘဲ Brand တစ်ခုရဲ့ Image နဲ့ Value ကို ဖော်ပြပေးတဲ့ Art တစ်ခုလို့ ယုံကြည်ထားပါတယ်။</p>
-            <h3 class="final-motto">“လုပ်ငန်းရှင်တိုင်းအဆင်ပြေဖို့ အဖြေ 7K”</h3>
-            <p class="solution-desc">ဒီဇိုင်းအခက်အခဲမှအစ အရည်အသွေးမြင့်ပုံနှိပ်လက်
+        <div class="about-right">
+            <div class="status-item">
+                <div class="status-icon"><i class="fas fa-eye"></i></div>
+                <div class="status-text">
+                    <h4>VISION</h4>
+                    <p>ခေတ်မီဆန်းသစ်သော ဒီဇိုင်းများနှင့် အဆင့်မြင့်ပုံနှိပ်နည်းပညာများကို ပေါင်းစပ်ပြီး မြန်မာ့ပုံနှိပ်လောကတွင် အကောင်းဆုံး ရပ်တည်ရန်။</p>
+                </div>
+            </div>
+
+            <div class="status-item highlight">
+                <div class="status-icon"><i class="fas fa-bullseye"></i></div>
+                <div class="status-text">
+                    <h4>MISSION</h4>
+                    <p>Quality First: အသေးဆုံး Detail မှအစ အမှားအယွင်းမရှိစေဘဲ အကောင်းဆုံး Quality ရရှိစေရန် ကြိုးပမ်းသွားမည်။</p>
+                </div>
+            </div>
+
+            <div class="status-item">
+                <div class="status-icon"><i class="fas fa-gem"></i></div>
+                <div class="status-text">
+                    <h4>CORE VALUES</h4>
+                    <p>တာဝန်ယူမှု၊ တိကျမှုနှင့် သေသပ်မှုများကို အခြေခံပြီး Professional ဆန်သော ဝန်ဆောင်မှုများ ပေးအပ်သည်။</p>
+                </div>
+            </div>
+            
+            <p class="final-quote">"7K အတွက် Printing ဆိုတာ Brand တစ်ခုရဲ့ Image နဲ့ Value ကို ဖော်ပြပေးတဲ့ Art တစ်ခုဖြစ်ပါတယ်။"</p>
+        </div>
+    </div>
+</section>
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <div class="contact-container">
