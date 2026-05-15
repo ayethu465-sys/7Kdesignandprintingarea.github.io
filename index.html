@@ -35,10 +35,20 @@
 
         /* --- Navigation --- */
         .nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 8%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(15px);
-            position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 1px solid var(--border);
-        }
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 8%; 
+    /* အနက်ရောင်အစား မှန်ကြည်ရောင် (Translucent) ပြောင်းထားပါတယ် */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(20px); /* နောက်ခံကို ဝါးစေပြီး စာလုံးကို ကြည်စေပါတယ် */
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ပါးပါးလေးပဲ border ထည့်ထားပါတယ် */
+}
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo img { height: 40px; border-radius: 5px; }
         .logo span { font-size: 1.6rem; font-weight: 800; color: var(--accent); letter-spacing: 2px; }
@@ -370,9 +380,9 @@
         <div class="logo"><img src="img/logo.jpg" alt="7K Logo"><span>7K</span></div>
         <nav class="menu">
             <a href="#">HOME</a>
-            <a href="#about">ABOUT</a>
             <a href="#services">SERVICES</a>
-            <a href="#gallery">PORTFOLIO</a> 
+            <a href="#gallery">PORTFOLIO</a>
+            <a href="#about">ABOUT</a> 
             <a href="#contact">CONTACT</a>
         </nav>
         <div class="burger">
@@ -388,19 +398,6 @@
             <p class="eng-motto">Best Service Best Quality For Your Business</p>
             <p class="mm-motto">လုပ်ငန်းရှင်တိုင်းအဆင်ပြေဖို့ အဖြေ 7K</p>
             <a href="#services" class="btn-main">See Our Best Services</a>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2 class="section-title">About Us</h2>
-            <p>
-                7K Design & Printing Area ကို ၂၀၂၃ ခုနှစ်၊ ဇူလိုင်လ (၇) ရက်နေ့တွင် ရန်ကုန်မြို့၊ အလုံမြို့နယ်၌ ခေတ်မီပုံနှိပ်လုပ်ငန်း၏ စံချိန်စံညွှန်းအသစ်များ ဖန်တီးနိုင်ရန် ရည်ရွယ်၍ စတင်တည်ထောင်ခဲ့ပါသည်။ ကျွန်ုပ်တို့သည် “Best Service, Best Quality” ဟူသော ဆောင်ပုဒ်ကို အလေးထားပြီး Customer များ၏ အတွေးအမြင်နှင့် စိတ်ကူးစိတ်သန်းများကို အရည်အသွေးမြင့်မားပြီး အလှပဆုံးသော ဒီဇိုင်းများအဖြစ် လက်တွေ့ဖော်ဆောင်ပေးနေသည့် ယုံကြည်အားထားရသော ပုံနှိပ်လုပ်ငန်းတစ်ခု ဖြစ်ပါသည်။ အရည်အသွေးကို အဓိကထား၍ တိကျမြန်ဆန်သော ဝန်ဆောင်မှုများဖြင့် လူကြီးမင်းတို့၏ လုပ်ငန်းများ ပိုမိုတိုးတက်အောင်မြင်ပြီး တောက်ပလာစေရန် အစဉ်မပြတ် အလေးထား ဆောင်ရွက်ပေးလျက်ရှိပါသည်။
-            </p>
-            <p>
-                7K Design & Printing Area was established on July 7, 2023, in Ahlone Township, Yangon, with the aim of creating new standards in modern printing services. We proudly uphold our motto, “Best Service, Best Quality,” and are a trusted printing business dedicated to transforming our customers’ ideas and creativity into high-quality and visually outstanding designs. With a strong focus on quality and efficient service, we continuously strive to support the growth and success of your business, helping it shine and stand out.
-            </p>
         </div>
     </section>
 
@@ -510,16 +507,16 @@
                 <div class="gallery-overlay"><span>Cupon</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/ID Card & Lanyard 1.jpg.png" alt="7K Portfolio">
+                <img src="img/ID.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>ID Card & Lanyard</span></div>
             </div>
              <div class="gallery-item">
-                <img src="img/p5.jpg" alt="7K Portfolio">
+                <img src="img/Businesscard.jpg" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Business Card</span></div>
             </div>
             
             <div class="gallery-item">
-                <img src="img/Profile Book 1.png" alt="7K Portfolio">
+                <img src="img/ProfileBook.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Profile Book</span></div>
             </div>
             <div class="gallery-item">
@@ -527,20 +524,20 @@
                 <div class="gallery-overlay"><span>Pamphlet</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/p3.jpg" alt="7K Portfolio">
+                <img src="img/QR.jpg" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>QR Stand</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/Newspaper 2.png" alt="7K Portfolio">
+                <img src="img/Newspaper.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Newspaper</span></div>
             </div>
             
             <div class="gallery-item">
-                <img src="img/Letterhead 3.png" alt="7K Portfolio">
+                <img src="img/Letterhead.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Letterhead</span></div>
             </div>
               <div class="gallery-item">
-                <img src="img/Noter Book.jpg" alt="7K Portfolio">
+                <img src="img/NoteBook.jpg" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Note Book</span></div>
             </div>
                      
@@ -553,21 +550,34 @@
                 <div class="gallery-overlay"><span>sportbottle</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/Carbonless Voucher 2.png" alt="7K Portfolio">
+                <img src="img/CarbonlessVoucher.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Carbonless Voucher</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/p2.jpg" alt="7K Portfolio">
+                <img src="img/advertising.jpg" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Advertising Material</span></div>
             </div>
             <div class="gallery-item">
-                <img src="img/Vinyl & X Stand.png" alt="7K Portfolio">
+                <img src="img/Vinyl&XStand.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Vinyl & X Stand</span></div>
             </div>
           <div class="gallery-item">
-                <img src="img/Die Cut Sticker 2.png" alt="7K Portfolio">
+                <img src="img/DieCut.png" alt="7K Portfolio">
                 <div class="gallery-overlay"><span>Die Cut Sticker</span></div>
             </div>
+        </div>
+    </section>
+
+      <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">About Us</h2>
+            <p>
+                7K Design & Printing Area ကို ၂၀၂၃ ခုနှစ်၊ ဇူလိုင်လ (၇) ရက်နေ့တွင် ရန်ကုန်မြို့၊ အလုံမြို့နယ်၌ ခေတ်မီပုံနှိပ်လုပ်ငန်း၏ စံချိန်စံညွှန်းအသစ်များ ဖန်တီးနိုင်ရန် ရည်ရွယ်၍ စတင်တည်ထောင်ခဲ့ပါသည်။ ကျွန်ုပ်တို့သည် “Best Service, Best Quality” ဟူသော ဆောင်ပုဒ်ကို အလေးထားပြီး Customer များ၏ အတွေးအမြင်နှင့် စိတ်ကူးစိတ်သန်းများကို အရည်အသွေးမြင့်မားပြီး အလှပဆုံးသော ဒီဇိုင်းများအဖြစ် လက်တွေ့ဖော်ဆောင်ပေးနေသည့် ယုံကြည်အားထားရသော ပုံနှိပ်လုပ်ငန်းတစ်ခု ဖြစ်ပါသည်။ အရည်အသွေးကို အဓိကထား၍ တိကျမြန်ဆန်သော ဝန်ဆောင်မှုများဖြင့် လူကြီးမင်းတို့၏ လုပ်ငန်းများ ပိုမိုတိုးတက်အောင်မြင်ပြီး တောက်ပလာစေရန် အစဉ်မပြတ် အလေးထား ဆောင်ရွက်ပေးလျက်ရှိပါသည်။
+            </p>
+            <p>
+                7K Design & Printing Area was established on July 7, 2023, in Ahlone Township, Yangon, with the aim of creating new standards in modern printing services. We proudly uphold our motto, “Best Service, Best Quality,” and are a trusted printing business dedicated to transforming our customers’ ideas and creativity into high-quality and visually outstanding designs. With a strong focus on quality and efficient service, we continuously strive to support the growth and success of your business, helping it shine and stand out.
+            </p>
         </div>
     </section>
 
