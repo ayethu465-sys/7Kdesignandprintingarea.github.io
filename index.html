@@ -87,49 +87,83 @@
         }
 
         /* --- About Section --- */
-       .about { padding: 80px 0; background: #0a0a0a; color: #fff; text-align: center; }
-    .about-intro { max-width: 900px; margin: 0 auto 50px; line-height: 1.8; opacity: 0.9; }
-    
-    .about-grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-        gap: 25px; 
-        margin-bottom: 50px;
-    }
+    .about {
+    padding: 80px 20px;
+    background: #000; /* နောက်ခံအမည်း */
+    color: #fff;
+    font-family: sans-serif;
+}
 
-    .about-card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(0, 210, 255, 0.2);
-        border-radius: 20px;
-        padding: 30px;
-        transition: 0.3s;
-        text-align: left;
-        backdrop-filter: blur(10px);
-    }
+/* စာသားတွေ အကျယ်ကြီး မဖြစ်အောင် ဒီကောင်က ထိန်းပေးတာ */
+.about-wrapper {
+    max-width: 1100px; 
+    margin: 0 auto;
+    text-align: center;
+}
 
-    .about-card:hover {
-        border-color: #00d2ff;
-        box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
-        transform: translateY(-5px);
-    }
+.section-title {
+    font-size: 2.5rem;
+    color: #00d2ff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
 
-    .highlighted-card { border: 1px solid #00d2ff; background: rgba(0, 210, 255, 0.05); }
+.about-intro {
+    margin-bottom: 60px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #ccc;
+}
 
-    .card-icon { font-size: 2.5rem; color: #00d2ff; margin-bottom: 15px; }
-    .about-card h3 { color: #00d2ff; font-size: 1.2rem; margin-bottom: 15px; }
-    .about-card ul { list-style: none; padding: 0; }
-    .about-card li { margin-bottom: 10px; font-size: 0.95rem; }
+/* ကတ် ၃ ခုကို စနစ်တကျ စီပေးတာ */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
 
-    .solution-highlight {
-        background: linear-gradient(135deg, rgba(0,210,255,0.1) 0%, rgba(0,0,0,1) 100%);
-        padding: 40px;
-        border-radius: 20px;
-        border: 1px solid #00d2ff;
-        margin-top: 40px;
-    }
+.about-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #00d2ff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
 
-    .solution-motto { font-size: 1.8rem; color: #00d2ff; margin: 20px 0; text-shadow: 0 0 10px #00d2ff; }
-    .solution-desc { max-width: 800px; margin: 0 auto; opacity: 0.8; }
+.about-card:hover {
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    transform: translateY(-10px);
+}
+
+.card-icon { font-size: 30px; margin-bottom: 15px; }
+.about-card h3 { color: #00d2ff; margin-bottom: 15px; font-size: 1.2rem; }
+
+.card-list { list-style: none; padding: 0; }
+.card-list li { margin-bottom: 10px; font-size: 0.95rem; color: #ddd; }
+
+/* အောက်ဆုံးက အဖြေ 7K အပိုင်း */
+.solution-highlight {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 50px;
+}
+
+.art-text { font-style: italic; color: #00d2ff; margin-bottom: 20px; }
+
+.solution-motto {
+    font-size: 2.2rem;
+    color: #00d2ff;
+    text-shadow: 0 0 15px #00d2ff;
+    margin: 20px 0;
+}
+
+.solution-desc { color: #888; max-width: 700px; margin: 0 auto; }
+
+/* Mobile အတွက် */
+@media (max-width: 768px) {
+    .solution-motto { font-size: 1.5rem; }
+}
 
         /* --- Services Section --- */
         .services { padding: 80px 8%; }
@@ -610,8 +644,8 @@
     </section>
 
       <!-- ABOUT SECTION -->
- <section id="about" class="about">
-    <div class="container">
+<section id="about" class="about">
+    <div class="about-wrapper">
         <h2 class="section-title">ABOUT US</h2>
         
         <div class="about-intro">
@@ -622,25 +656,25 @@
 
         <div class="about-grid">
             <div class="about-card">
-                <div class="card-icon"><i class="fas fa-eye"></i></div>
+                <div class="card-icon">👁️</div>
                 <h3>ကျွန်ုပ်တို့၏ Vision | (မျှော်မှန်းချက်)</h3>
                 <p>ခေတ်မီဆန်းသစ်သော ဒီဇိုင်းများနှင့် အဆင့်မြင့်ပုံနှိပ်နည်းပညာများကို ပေါင်းစပ်ပြီး မြန်မာ့ပုံနှိပ်လောကတွင် ယုံကြည်စိတ်ချရဆုံးနှင့် အရည်အသွေးအကောင်းဆုံး လုပ်ငန်းတစ်ခုအဖြစ် ရပ်တည်ရန်။</p>
             </div>
 
-            <div class="about-card highlighted-card">
-                <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="about-card">
+                <div class="card-icon">🎯</div>
                 <h3>ကျွန်ုပ်တို့၏ Mission | (ရည်မှန်းချက်)</h3>
-                <ul>
+                <ul class="card-list">
                     <li><strong>Quality First:</strong> အသေးဆုံး Detail မှအစ အမှားအယွင်းမရှိစေဘဲ အကောင်းဆုံး Quality ရရှိစေရန်။</li>
                     <li><strong>Customer Trust:</strong> တိကျမြန်ဆန်သော ဝန်ဆောင်မှုဖြင့် Customer တိုင်း စိတ်ကျေနပ်မှုရရှိစေရန်။</li>
-                    <li><strong>Creative Solutions:</strong> လုပ်ငန်းအောင်မြင်မှုအတွက် ထိရောက်သော Design Solution များ ပေးအပ်ရန်။</li>
+                    <li><strong>Creative Solutions:</strong> လုပ်ငန်းအောင်မြင်မှုအတွက် ထိရောက်သော Solution များ ပေးအပ်ရန်။</li>
                 </ul>
             </div>
 
             <div class="about-card">
-                <div class="card-icon"><i class="fas fa-heart"></i></div>
+                <div class="card-icon">💎</div>
                 <h3>Core Values | (တန်ဖိုးထားမှုများ)</h3>
-                <ul>
+                <ul class="card-list">
                     <li><strong>တာဝန်ယူမှု:</strong> အလုပ်တိုင်းကို စေတနာထားပြီး အဆုံးထိ တာဝန်ယူသည်။</li>
                     <li><strong>တိကျမှု:</strong> ပေးထားသော ရက်အတွင်း အကောင်းဆုံးလက်ရာများ ထွက်ရှိစေရန် လုပ်ဆောင်သည်။</li>
                     <li><strong>သေသပ်မှု:</strong> Professional ဆန်သော အချောသတ်လက်ရာများဖြစ်စေရန် ကိုင်တွယ်သည်။</li>
@@ -649,13 +683,12 @@
         </div>
 
         <div class="solution-highlight">
-            <p>7K အတွက် Printing ဆိုတာ စာရွက်ပေါ် Ink တင်တာမဟုတ်ဘဲ Brand တစ်ခုရဲ့ Image နဲ့ Value ကို ဖော်ပြပေးတဲ့ Art တစ်ခုလို့ ယုံကြည်ထားပါတယ်။</p>
+            <p class="art-text">7K အတွက် Printing ဆိုတာ စာရွက်ပေါ် Ink တင်တာမဟုတ်ဘဲ Brand တစ်ခုရဲ့ Image နဲ့ Value ကို ဖော်ပြပေးတဲ့ Art တစ်ခုလို့ ယုံကြည်ထားပါတယ်။</p>
             <h3 class="solution-motto">“လုပ်ငန်းရှင်တိုင်းအဆင်ပြေဖို့ အဖြေ 7K”</h3>
             <p class="solution-desc">ဒီဇိုင်းအခက်အခဲမှအစ အရည်အသွေးမြင့်ပုံနှိပ်လက်ရာများကို အချိန်မီရရှိစေဖို့ ကျွန်တော်တို့က အကောင်းဆုံး Solution တွေကို တာဝန်ယူဖြေရှင်းပေးနေပါသည်။</p>
         </div>
     </div>
 </section>
-
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
         <div class="contact-container">
