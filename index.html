@@ -174,10 +174,20 @@
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 15px;
+    /* အကြံပြုချက် - ပုံကို Frame အပြည့် ဖြည့်လိုက်တာက ပိုကြည်စေပါတယ် */
+    object-fit: cover; 
+    
+    /* Padding ကို ဖြုတ်လိုက်ရင် ပုံက Frame နဲ့ ကွက်တိဖြစ်ပြီး ပိုကြည်လာမယ် */
+    padding: 0; 
+    
     transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4));
+    
+    /* အရည်အသွေးကို Sharp ဖြစ်စေတဲ့ line လေး ထည့်ပေးလိုက်တယ် */
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Scale ကို ၁.၁ အစား ၁.၀၅ လောက်ပဲ ထားရင် ပုံသိပ်မဝါးတော့ဘူး */
 }
 
 .gallery-item:hover img {
@@ -504,7 +514,7 @@
            
             <div class="gallery-item">
                 <img src="img/Cupon.png" alt="7K Portfolio">
-                <div class="gallery-overlay"><span>Cupon</span></div>
+                <div class="gallery-overlay"><span>Coupon</span></div>
             </div>
             <div class="gallery-item">
                 <img src="img/ID.png" alt="7K Portfolio">
