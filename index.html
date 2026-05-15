@@ -87,34 +87,35 @@
         }
 
         /* --- About Section --- */
- .about {
+.about {
     background: #000;
     padding: 100px 20px;
-    color: #ffffff;
+    color: #ffffff; /* ကျန်တဲ့ section တွေလို အဖြူစစ်စစ် ပြောင်းလိုက်ပြီ */
 }
 
-/* ဒီအပိုင်းက အဓိကပဲ - စာတွေကို ဘေးမပြန့်အောင် ထိန်းပေးတာ */
 .about-container {
-    max-width: 1000px; /* စာသားအကျယ်ကို ၁၀၀၀ ပဲ ထားမယ် */
-    margin: 0 auto;    /* Screen ရဲ့ အလယ်မှာ ကွက်တိဖြစ်အောင် လုပ်တာ */
+    max-width: 1000px; 
+    margin: 0 auto;
     text-align: center;
 }
 
 .section-title {
-    color: #00d2ff;
+    color: #00d2ff; /* 7K ရဲ့ အဓိက Cyan Blue */
     font-size: 2.5rem;
     margin-bottom: 40px;
-    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+    text-transform: uppercase;
 }
 
-.about-intro p {
-    margin-bottom: 20px;
+/* စာသားတွေအားလုံးကို အဖြူစစ်စစ် ပြောင်းတာ */
+.about-intro p, 
+.about-card p, 
+.solution-desc {
+    color: #ffffff !important; 
     line-height: 1.8;
-    color: #e0e0e0;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
-/* Grid Layout ကို ညီအောင် ညှိတာ */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,41 +124,37 @@
 }
 
 .about-card {
-    background: rgba(0, 210, 255, 0.05);
-    border: 1px solid rgba(0, 210, 255, 0.3);
+    background: transparent; /* ကတ်တွေကို နောက်ခံအရောင်ဖျောက်ပြီး Border ပဲထားမယ် */
+    border: 1.5px solid #00d2ff;
     padding: 30px;
     border-radius: 15px;
     text-align: left;
-    transition: 0.3s;
-}
-
-.about-card:hover {
-    border-color: #00d2ff;
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    box-shadow: inset 0 0 10px rgba(0, 210, 255, 0.1);
 }
 
 .about-card h3 {
-    color: #00d2ff;
+    color: #00d2ff; /* ခေါင်းစဉ်ကို Cyan Blue ထားမယ် */
     margin: 15px 0;
+    font-size: 1.25rem;
 }
 
-/* Motto အပိုင်းကို Glow ပေးတာ */
+/* Motto အပိုင်းကို ပိုတောက်အောင် လုပ်တာ */
 .final-motto {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #00d2ff;
-    text-shadow: 0 0 20px #00d2ff;
-    margin: 30px 0;
+    text-shadow: 0 0 15px #00d2ff, 0 0 30px rgba(0, 210, 255, 0.5);
+    margin: 25px 0;
+    font-weight: bold;
 }
 
 .highlight-text {
-    color: #00d2ff;
-    font-style: italic;
-    border-left: 4px solid #00d2ff;
+    color: #ffffff;
+    border-left: 5px solid #00d2ff;
     padding-left: 20px;
     display: inline-block;
     text-align: left;
+    margin-bottom: 20px;
 }
-
 /* Mobile အတွက် */
 @media (max-width: 768px) {
     .solution-motto { font-size: 1.5rem; }
